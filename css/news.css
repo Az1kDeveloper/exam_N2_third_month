@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+@font-face {
+  font-family: "Cera Round Pro";
+  src: url("../../assets/fonts/Fontspring-DEMO-ceraroundpro-medium.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.container {
+  max-width: 1340px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#backtop {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: -70px;
+  right: 50px;
+  background: transparent;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+header {
+  background: #BB2339;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+nav {
+  font-family: "Open Sans";
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  padding: 30px 0px;
+  background: #BB2339;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+nav .nav-btn {
+  padding: 10px 35px;
+  border: 1px solid #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 175%;
+  border-radius: 50%;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  letter-spacing: 0.05em;
+  background: transparent;
+  color: #ffffff;
+  text-transform: capitalize;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+nav .nav-btn:hover {
+  color: #BB2339;
+  background-color: #ffffff;
+}
+
+.navbar-shrink {
+  padding: 16px 0px;
+  background: rgb(133, 2, 2);
+  box-shadow: 0px 0px 3px 3px #E5E5E5;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site_links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  gap: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.list_link {
+  padding: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.list_link:hover {
+  border-bottom: 1px solid #ffffff;
+  color: #242424;
+}
+
+.hamburger, .close {
+  background: transparent;
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .nav-list {
+    display: none;
+  }
+  .hamburger {
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 800px) {
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #BB2339;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+  }
+  .close {
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 35px;
+  }
+}
+.foot_top {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.newsletter {
+  position: relative;
+  left: 0px;
+  top: 200px;
+  right: 0;
+  padding: 65px 0px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 22px 30px 95px 1px rgba(86, 86, 86, 0.2);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #BB2339;
+  font-family: "Cera Round Pro";
+  font-style: normal;
+  color: #FFFFFF;
+}
+.newsletter h4 {
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 130%;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+}
+.newsletter h2 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+  font-feature-settings: "tnum" on, "lnum" on;
+}
+.newsletter p {
+  margin-bottom: 65px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+  letter-spacing: 0.04em;
+}
+.newsletter .form_inp {
+  display: flex;
+  gap: 50px;
+}
+.newsletter .form_inp input {
+  padding: 12px 505px 12px 18px;
+  border: 1px solid rgba(245, 239, 219, 0.5);
+  border-radius: 100px;
+  background: transparent;
+}
+.newsletter .form_inp button {
+  padding: 10px 35px;
+  border: 1px solid #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 175%;
+  border-radius: 50%;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  letter-spacing: 0.05em;
+  background: transparent;
+  color: #ffffff;
+  text-transform: capitalize;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.newsletter .form_inp button:hover {
+  color: #BB2339;
+  background-color: #ffffff;
+}
+
+.foot_bottom {
+  padding: 250px 0px 50px;
+  background-color: #BB2339;
+}
+.foot_bottom .footeerEnd {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+.foot_bottom .footeerEnd .contactus {
+  max-width: 281px;
+  color: #ffffff;
+  font-style: normal;
+  text-align: center;
+}
+.foot_bottom .footeerEnd .contactus h2 {
+  font-family: "Cera Round Pro";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 130%;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+}
+.foot_bottom .footeerEnd .contactus address {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.04em;
+}
+.foot_bottom .footeerEnd .contactus a {
+  display: block;
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.04em;
+}
+.foot_bottom .footeerEnd .aboutus {
+  max-width: 440px;
+  color: #ffffff;
+  font-style: normal;
+  text-align: center;
+  font-family: "Open Sans";
+}
+.foot_bottom .footeerEnd .aboutus blockquote {
+  margin-top: 32px;
+  margin-bottom: 45px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+.foot_bottom .footeerEnd .aboutus span {
+  margin-top: 80px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+  letter-spacing: 0.04em;
+}
+.foot_bottom .footeerEnd .working {
+  max-width: 240px;
+  color: #ffffff;
+  font-style: normal;
+  text-align: center;
+}
+.foot_bottom .footeerEnd .working h2 {
+  font-family: "Cera Round Pro";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 130%;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+}
+.foot_bottom .footeerEnd .working time {
+  margin-top: 25px;
+  margin-bottom: 12px;
+  display: block;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.04em;
+}
+
+@media (max-height: 1250px) {
+  .footeerEnd {
+    margin-top: 20px;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+}
+@media (max-width: 900px) {
+  .newsletter {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .newsletter .form_inp {
+    flex-direction: column;
+    align-items: center;
+  }
+  .newsletter .form_inp input {
+    padding: 10px 35px;
+    border: 1px solid #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 175%;
+    border-radius: 50%;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    letter-spacing: 0.05em;
+    background: transparent;
+    color: #ffffff;
+    text-transform: capitalize;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+  .newsletter .form_inp input:hover {
+    color: #BB2339;
+    background-color: #ffffff;
+  }
+}

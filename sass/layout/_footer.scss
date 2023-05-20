@@ -1,0 +1,182 @@
+@use '../utils/mixin' as mix;
+@use '../utils/variables' as var;
+@use "../base/typography";
+@use "../base/reset";
+@use "../layout/container";
+
+// ----newsletter----///
+.foot_top {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: var.$primary-color;
+}
+.newsletter {
+    position: relative;
+    left: 0px;
+    top: 200px;
+    right: 0;
+    padding: 65px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 22px 30px 95px 1px rgba(86, 86, 86, 0.2);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var.$secondary-color;
+    font-family: 'Cera Round Pro';
+    font-style: normal;
+    color: #FFFFFF;
+    & h4 {
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 130%;
+        letter-spacing: 0.04em;
+        text-transform: capitalize;
+        
+    }
+    & h2 {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-weight: 400;
+        font-size: var.$h2;
+        line-height: 130%;
+        letter-spacing: 0.03em;
+        text-transform: capitalize;
+        font-feature-settings: 'tnum' on, 'lnum' on;
+    }
+    & p {
+        margin-bottom: 65px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+        letter-spacing: 0.04em;
+    }
+    & .form_inp {
+        display: flex;
+        gap: 50px;
+        & input {
+            padding: 12px 505px 12px 18px;
+            border: 1px solid rgba(245, 239, 219, 0.5);
+            border-radius: 100px;
+            background: transparent;
+        }
+        & button {
+            @include mix.btn-1;
+        }
+    }
+}
+
+
+.foot_bottom {
+    padding: 250px 0px 50px;
+    background-color: var.$secondary-color;
+    & .footeerEnd {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & .contactus {
+            max-width: 281px;
+            color: var.$primary-color;
+            font-style: normal;
+            text-align: center;
+            & h2 {
+                font-family: 'Cera Round Pro';
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 130%;
+                letter-spacing: 0.04em;
+                text-transform: capitalize;
+            }
+            & address {
+                margin-top: 25px;
+                margin-bottom: 10px;
+                font-family: 'Open Sans';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 0.04em;
+            }
+            & a {
+                display: block;
+                color: var.$primary-color;
+                font-family: 'Open Sans';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 0.04em;
+            }
+        }
+        & .aboutus {
+            max-width: 440px;
+            color: var.$primary-color;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-style: normal;
+            text-align: center;
+            font-family: 'Open Sans';
+            & blockquote {
+                margin-top: 32px;
+                margin-bottom: 45px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                text-align: center;
+                letter-spacing: 0.04em;
+            }
+            & span {
+                margin-top: 80px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 175%;
+                letter-spacing: 0.04em;
+            }
+        }
+        & .working {
+            max-width: 240px;
+            color: var.$primary-color;
+            font-style: normal;
+            text-align: center;
+            & h2 {
+                font-family: 'Cera Round Pro';
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 130%;
+                letter-spacing: 0.04em;
+                text-transform: capitalize;
+            }
+            & time {
+                margin-top: 25px;
+                margin-bottom: 12px;
+                display: block;
+                font-family: 'Open Sans';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 0.04em;
+            }
+        }
+    }
+}
+
+@media (max-height: 900px) {
+    .footeerEnd {
+    }
+}
+@media (max-width: 900px) {
+    .newsletter {
+        max-width: 500px;
+        display: flex;
+       justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        & .form_inp {
+            flex-direction: column;
+            align-items: center;
+            & input {
+                @include mix.btn-1;
+            }
+        }
+    }
+}
